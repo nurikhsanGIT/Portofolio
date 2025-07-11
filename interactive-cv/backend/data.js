@@ -1,7 +1,7 @@
 // backend/data.js
 const educationHistory = [
-{ id: 1, period: '2023 - Sekarang', institution: 'Universitas Amikom Yogyakarta', major: 'S1 - Teknik Informatika' },
-{ id: 2, period: '2019 - 2023', institution: 'SMKN 2 BANJARBARU', major: 'TEKNIK KOMPUTER JARINGAN' }
+{ id: 1, period: '2023 - Sekarang', institution: 'Universitas Amikom Yogyakarta', major: 'S1 - Teknik Informatika', image: "http://localhost:3000/images/amikom.png" },
+{ id: 2, period: '2019 - 2023', institution: 'SMKN 2 BANJARBARU', major: 'TEKNIK KOMPUTER JARINGAN', image: "http://localhost:3000/images/skenda.png" }
 ];
 const skills = [
 { name: 'Vue.js', level: 'beginner' }, { name: 'JavaScript', level: 'pemula' },
@@ -10,10 +10,15 @@ const skills = [
 { name: 'Git & GitHub', level: 'Menengah' }, { name: 'HTML5 & CSS3', level: 'Menengah' },
 ];
 const projects = [
-{ title: 'Website pengaduan Masyarakat', image: 'https://via.placeholder.com/500x300?text=Proyek+1',
-description: 'Platform untuk masyarakat melakukan pengaduan untuk fasilitas publik yang rusak', tech: ['Vue.js', 'Express.js',
-'PostgreSQL'], link: '#' },
-{ title: 'Aplikasi e-commerce biliard', image: 'https://via.placeholder.com/500x300?text=Proyek+2',
-description: 'Aplikasi untuk melacak progres tugas harian.', tech: ['React', 'Firebase'], link: '#' }
+{ 
+title: 'Website pengaduan Masyarakat',
+image: '/images/pengaduan.png',
+description: 'Platform untuk masyarakat melakukan pengaduan untuk fasilitas publik yang rusak',
+ tech: ['Vue.js', 'node.js,', 'SQL'], link: '#' },
+{ 
+title: 'Aplikasi e-commerce biliard', 
+image: '/images/billiard.png',
+description: 'Aplikasi untuk membeli atau transaksi peralatan olahraga billiard',
+tech: ['figma'], link: '#' }
 ];
 module.exports = { educationHistory, skills, projects }

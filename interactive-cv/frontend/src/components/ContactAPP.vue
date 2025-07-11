@@ -28,7 +28,7 @@ import SectionTitle from './SectionTitle.vue'
         >
       </div>
       <p class="text-gray-500">
-        &copy; {{ new Date().getFullYear() }} nur ikhsan cleviriadi. Dibuat dengan sepenuh hati dan cinta
+        &copy; {{ new Date().getFullYear() }} nur ikhsan cleviriadi. Dibuat dengan cinta menggunakan Vue.js
       </p>
     </div>
   </footer>
