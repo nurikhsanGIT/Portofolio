@@ -39,9 +39,9 @@
                 class="card max-w-md"
                 data-aos="fade-right"
               >
-                <img :src="edu.logo" class="w-16 h-16 object-contain" />
+                <img :src="images" class="w-16 h-16 object-contain" />
                 <div class="text-right">
-                  <p class="text-sm font-semibold text-yellow-500 mb-1">{{ edu.period }}</p>
+                  <p class="text-sm font-semibold text-grey-800 mb-1">{{ edu.period }}</p>
                   <h3 class="text-2xl font-bold text-white mb-1">{{ edu.institution }}</h3>
                   <p class="text-white/80">{{ edu.major }}</p>
                 </div>
@@ -73,9 +73,9 @@
                 class="card max-w-md"
                 data-aos="fade-left"
               >
-                <img :src="edu.logo" class="w-16 h-16 object-contain" />
+                <img :src="images" class="w-16 h-16 object-contain" />
                 <div class="text-right">
-                  <p class="text-sm font-semibold text-yellow-500 mb-1">{{ edu.period }}</p>
+                  <p class="text-sm font-semibold text-grey-800 mb-1">{{ edu.period }}</p>
                   <h3 class="text-2xl font-bold text-white mb-1">{{ edu.institution }}</h3>
                   <p class="text-white/80">{{ edu.major }}</p>
                 </div>
@@ -93,9 +93,9 @@
               class="card w-full max-w-sm text-left"
               data-aos="fade-up"
             >
-              <img :src="edu.logo" class="w-16 h-16 object-contain" />
+              <img :src="images" class="w-16 h-16 object-contain" />
               <div>
-                <p class="text-sm font-semibold text-yellow-500 mb-1">{{ edu.period }}</p>
+                <p class="text-sm font-semibold text-grey-800 mb-1">{{ edu.period }}</p>
                 <h3 class="text-2xl font-bold text-white mb-1">{{ edu.institution }}</h3>
                 <p class="text-white/80">{{ edu.major }}</p>
               </div>
@@ -131,7 +131,7 @@ onMounted(async () => {
   background-position: center;
 }
 .bulet {
-  background-color: #e9c200;
+  background-color: #1f2928;
 }
 .card {
   background-color: rgba(255, 255, 255, 0.08);
