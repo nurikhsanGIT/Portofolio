@@ -1,5 +1,5 @@
 <script setup>
-import backgroundImage from '@/assets/background.png'
+import backgroundImage from '@/assets/foto/backgroundweb.jpg';
 </script>
 
 <template>
