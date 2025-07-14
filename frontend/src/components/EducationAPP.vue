@@ -5,21 +5,6 @@
       <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
         <SectionTitle title="Education History" class="text-white" />
       </div>
-
-      <!-- Deskripsi -->
-      <div
-        class="max-w-3xl mx-auto text-white text-center mt-6 mb-12"
-        data-aos="fade-up"
-        data-aos-delay="600"
-        data-aos-duration="800"
-      >
-        <p class="text-white/90 leading-relaxed">
-          Perjalanan akademik saya menjadi pondasi penting dalam membentuk pemahaman yang mendalam
-          terhadap dunia teknologi informasi dan pengembangan aplikasi, yang kini saya tekuni
-          sebagai seorang IT Developer.
-        </p>
-      </div>
-
       <div class="relative">
         <div
           class="hidden md:block absolute h-full border-r-2 border-gray-300 left-1/2 transform -translate-x-1/2"
@@ -32,20 +17,14 @@
           <!-- Desktop kiri -->
           <div v-if="index % 2 === 0" class="hidden md:flex justify-between items-center">
             <div class="w-1/2 pr-8 flex justify-end">
-              <a
-                :href="edu.link"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="card max-w-md"
-                data-aos="fade-right"
-              >
-                <img :src="images" class="w-16 h-16 object-contain" />
+              <div class="card max-w-md" data-aos="fade-right">
+                <img :src="edu.imgaes" class="w-16 h-16 object-contain" />
                 <div class="text-right">
-                  <p class="text-sm font-semibold text-grey-800 mb-1">{{ edu.period }}</p>
+                  <p class="text-sm font-semibold text-yellow-500 mb-1">{{ edu.period }}</p>
                   <h3 class="text-2xl font-bold text-white mb-1">{{ edu.institution }}</h3>
                   <p class="text-white/80">{{ edu.major }}</p>
                 </div>
-              </a>
+              </div>
             </div>
             <div class="w-1/2 flex justify-start">
               <div
@@ -66,40 +45,28 @@
               ></div>
             </div>
             <div class="w-1/2 pl-8 flex justify-start">
-              <a
-                :href="edu.link"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="card max-w-md"
-                data-aos="fade-left"
-              >
-                <img :src="images" class="w-16 h-16 object-contain" />
+              <div class="card max-w-md" data-aos="fade-left">
+                <img :src="edu.images" class="w-16 h-16 object-contain" />
                 <div class="text-right">
-                  <p class="text-sm font-semibold text-grey-800 mb-1">{{ edu.period }}</p>
+                  <p class="text-sm font-semibold text-yellow-500 mb-1">{{ edu.period }}</p>
                   <h3 class="text-2xl font-bold text-white mb-1">{{ edu.institution }}</h3>
                   <p class="text-white/80">{{ edu.major }}</p>
                 </div>
-              </a>
+              </div>
             </div>
           </div>
 
           <!-- Mobile -->
           <div class="md:hidden flex flex-col items-center gap-4">
             <div class="w-4 h-4 bulet rounded-full z-10"></div>
-            <a
-              :href="edu.link"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="card w-full max-w-sm text-left"
-              data-aos="fade-up"
-            >
-              <img :src="images" class="w-16 h-16 object-contain" />
+            <div class="card w-full max-w-sm text-left" data-aos="fade-up">
+              <img :src="edu.imges" class="w-16 h-16 object-contain" />
               <div>
-                <p class="text-sm font-semibold text-grey-800 mb-1">{{ edu.period }}</p>
+                <p class="text-sm font-semibold text-yellow-500 mb-1">{{ edu.period }}</p>
                 <h3 class="text-2xl font-bold text-white mb-1">{{ edu.institution }}</h3>
                 <p class="text-white/80">{{ edu.major }}</p>
               </div>
-            </a>
+            </div>
           </div>
         </div>
       </div>
@@ -126,12 +93,12 @@ onMounted(async () => {
 
 <style scoped>
 .edu {
-  background-image: linear-gradient(to bottom, #eeeeee, #d4d4d4);
+  background-image: linear-gradient(to bottom, #fdfbfb, #ebedee);
   background-size: cover;
   background-position: center;
 }
 .bulet {
-  background-color: #1f2928;
+  background-color: #e9c200;
 }
 .card {
   background-color: rgba(255, 255, 255, 0.08);
