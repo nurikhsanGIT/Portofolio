@@ -1,31 +1,14 @@
-<script setup>
-import { ref, onMounted } from 'vue'
-import axios from 'axios'
-import SectionTitle from './SectionTitle.vue'
-
-const projects = ref([])
-
-onMounted(async () => {
-  try {
-    const response = await axios.get('http://localhost:3000/api/projects')
-    projects.value = response.data
-  } catch (error) {
-    console.error(error)
-  }
-});
-</script>
-
 <template>
-  <section id="proyek" class="py-20 bg-[#A5A5A5]">
+  <section id="proyek" class="py-20 bg-gradient-to-r from-blue-100 via-blue-50 to-green-100 min-h-screen font-sans">
     <div class="container mx-auto px-6">
-      <SectionTitle title="Proyek Unggulan" />
+      <SectionTitle title="PROYEK" />
       <div class="grid md:grid-cols-2 gap-12">
         <div
           v-for="project in projects"
           :key="project.title"
           class="bg-gray-50 rounded-lg shadow-lg overflow-hidden"
         >
-           <img :src="project.image" alt="" class="w-full h-56 object-cover">
+          <img :src="project.image" alt="Gambar Proyek" class="w-full h-56 object-cover" />
           <div class="p-6">
             <h3 class="text-2xl font-bold text-gray-800 mb-2">{{ project.title }}</h3>
             <p class="text-gray-600 mb-4">{{ project.description }}</p>
@@ -37,11 +20,12 @@ onMounted(async () => {
                 >{{ t }}</span
               >
             </div>
+            
             <a
               :href="project.link"
               target="_blank"
               rel="noopener noreferrer"
-              class="text-blue-600 font-semibold hover:underline"
+              class="text-blue-600 font semibold hover:underline"
               >Lihat Detail &rarr;</a
             >
           </div>
@@ -50,4 +34,18 @@ onMounted(async () => {
     </div>
   </section>
 </template>
-<style scoped></style>
+<script setup>
+import { ref, onMounted } from 'vue'
+import axios from 'axios'
+import SectionTitle from './SectionTitle.vue'
+const projects = ref([])
+onMounted(async () => {
+  try {
+    const response = await axios.get('/api/projects');
+    projects.value = response.data;
+  } catch (error) {
+    console.error(error);
+  }
+});
+
+</script>
