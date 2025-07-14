@@ -8,6 +8,6 @@
     }
   },
   "rewrites": [
-    { "source": "/Api/(.*)", "destination": "/Api/$1.js" }
+    { "source": "/api/(.*)", "destination": "/api/$1.js" }
   ]
 }
