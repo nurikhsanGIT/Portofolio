@@ -35,7 +35,7 @@
                 class="bg-white rounded-xl shadow-lg p-4 md:p-6 hover:shadow-2xl transition duration-300 flex flex-col md:flex-row items-center gap-2 md:gap-4 w-full md:max-w-md"
               >
                 <img
-                  :src="edu.images"
+                  :src="edu.image"
                   class="w-16 h-16 object-contain"
                   alt="Logo Institusi"
                 />
