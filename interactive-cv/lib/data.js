@@ -1,6 +1,6 @@
 export const educationHistory = [
-{ id: 1, period: '2023 - Sekarang', institution: 'Universitas Amikom Yogyakarta', major: 'S1 - Teknik Informatika', image: "/images/amikom.png" },
-{ id: 2, period: '2019 - 2023', institution: 'SMKN 2 BANJARBARU', major: 'TEKNIK KOMPUTER JARINGAN', image: "images/skenda.png" }
+{ id: 1, period: '2023 - Sekarang', institution: 'Universitas Amikom Yogyakarta', major: 'S1 - Teknik Informatika', image: '/images/amikom.png' },
+{ id: 2, period: '2019 - 2023', institution: 'SMKN 2 BANJARBARU', major: 'TEKNIK KOMPUTER JARINGAN', image: '/images/skenda.png' }
 ];
 export const skills = [
 { name: 'Vue.js', level: 'beginner' }, { name: 'JavaScript', level: 'pemula' },
