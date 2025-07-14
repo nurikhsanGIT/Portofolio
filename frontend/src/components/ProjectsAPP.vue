@@ -1,5 +1,5 @@
 <template>
-  <section id="proyek" class="py-20 bg-gradient-to-r from-blue-100 via-blue-50 to-green-100 min-h-screen font-sans">
+  <section id="proyek" class="py-20 min-h-screen font-sans">
     <div class="container mx-auto px-6">
       <SectionTitle title="PROYEK" />
       <div class="grid md:grid-cols-2 gap-12">
@@ -17,35 +17,46 @@
                 v-for="t in project.tech"
                 :key="t"
                 class="inline-block bg-blue-100 text-blue-800 text-sm font-semibold mr-2 mb-2 px-2.5 py-0.5 rounded-full"
-                >{{ t }}</span
               >
+                {{ t }}
+              </span>
             </div>
-            
             <a
               :href="project.link"
               target="_blank"
               rel="noopener noreferrer"
-              class="text-blue-600 font semibold hover:underline"
-              >Lihat Detail &rarr;</a
+              class="text-blue-600 font-semibold hover:underline"
             >
+              Lihat Detail &rarr;
+            </a>
           </div>
         </div>
       </div>
     </div>
   </section>
 </template>
+
 <script setup>
 import { ref, onMounted } from 'vue'
 import axios from 'axios'
 import SectionTitle from './SectionTitle.vue'
+
 const projects = ref([])
+
 onMounted(async () => {
   try {
-    const response = await axios.get('/api/projects');
-    projects.value = response.data;
+    const response = await axios.get('/api/projects')
+    projects.value = response.data
   } catch (error) {
-    console.error(error);
+    console.error(error)
   }
-});
-
+})
 </script>
+
+<style scoped>
+#proyek {
+  background-image: linear-gradient(to bottom right, #000000, #ffffff);
+  background-size: cover;
+  background-position: center;
+}
+</style>

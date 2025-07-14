@@ -17,10 +17,11 @@
         data-aos-duration="800"
       >
         <p class="text-white/90 leading-relaxed">
-        Perjalanan akademik saya menjadi pondasi penting dalam membentuk pemahaman yang mendalam
-        terhadap dunia teknologi informasi dan pengembangan aplikasi, yang kini saya tekuni sebagai seorang IT Developer.
+          Perjalanan akademik saya menjadi pondasi penting dalam membentuk pemahaman yang mendalam
+          terhadap dunia teknologi informasi dan pengembangan aplikasi, yang kini saya tekuni sebagai seorang IT Developer.
         </p>
       </div>
+
       <div class="relative">
         <div
           class="hidden md:block absolute h-full border-r-2 border-gray-300 left-1/2 transform -translate-x-1/2"
@@ -28,6 +29,7 @@
           data-aos-duration="800"
           data-aos-delay="600"
         ></div>
+
         <div
           v-for="(edu, index) in educationHistory"
           :key="edu.id"
@@ -83,7 +85,7 @@
             </div>
           </div>
 
-          <!-- Mobile: layout vertikal -->
+          <!-- Mobile layout -->
           <div class="md:hidden flex flex-col items-center gap-4">
             <div class="w-4 h-4 bulet rounded-full z-10"></div>
             <a
@@ -126,7 +128,7 @@ onMounted(async () => {
 
 <style scoped>
 .edu {
-  background-image: url('../assets/background/wl7.jpg');
+  background-image: linear-gradient(to bottom right, #000000, #ffffff);
   background-size: cover;
   background-position: center;
 }

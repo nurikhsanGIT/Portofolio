@@ -1,5 +1,5 @@
 <template>
-  <section id="skill" class="py-20 bg-gradient-to-r from-green-100 via-blue-50 to-blue-100 min-h-screen font-sans">
+  <section id="skill" class="py-20 min-h-screen font-sans">
     <div class="container mx-auto px-6">
       <SectionTitle title="KEAHLIAN" />
       <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -18,6 +18,7 @@
     </div>
   </section>
 </template>
+
 <script setup>
 import { ref, onMounted } from 'vue'
 import axios from 'axios'
@@ -45,3 +46,11 @@ onMounted(async () => {
   }
 })
 </script>
+
+<style scoped>
+#skill {
+  background-image: linear-gradient(to bottom right, #000000, #ffffff);
+  background-size: cover;
+  background-position: center;
+}
+</style>
