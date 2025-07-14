@@ -1,5 +1,5 @@
 <template>
-  <section id="proyek" class="py-20 min-h-screen font-sans">
+  <section id="proyek" class="py-20 min-h-screen font-sans project-bg">
     <div class="container mx-auto px-6">
       <SectionTitle title="PROYEK" />
       <div class="grid md:grid-cols-2 gap-12">
@@ -54,8 +54,8 @@ onMounted(async () => {
 </script>
 
 <style scoped>
-#proyek {
-  background-image: linear-gradient(to bottom right, #000000, #ffffff);
+.project-bg {
+  background-image: linear-gradient(to bottom, #bcbcbc, #a8a8a8);
   background-size: cover;
   background-position: center;
 }

@@ -1,8 +1,5 @@
 <template>
-  <section
-    id="pendidikan"
-    class="edu py-20 bg-gradient-to-r from-blue-100 via-blue-50 to-green-100 min-h-screen font-sans overflow-x-hidden"
-  >
+  <section id="pendidikan" class="edu py-20 min-h-screen font-sans overflow-x-hidden">
     <div class="container mx-auto px-4 sm:px-6">
       <!-- Section Title -->
       <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
@@ -18,7 +15,8 @@
       >
         <p class="text-white/90 leading-relaxed">
           Perjalanan akademik saya menjadi pondasi penting dalam membentuk pemahaman yang mendalam
-          terhadap dunia teknologi informasi dan pengembangan aplikasi, yang kini saya tekuni sebagai seorang IT Developer.
+          terhadap dunia teknologi informasi dan pengembangan aplikasi, yang kini saya tekuni
+          sebagai seorang IT Developer.
         </p>
       </div>
 
@@ -30,15 +28,9 @@
           data-aos-delay="600"
         ></div>
 
-        <div
-          v-for="(edu, index) in educationHistory"
-          :key="edu.id"
-          class="mb-10 w-full px-4"
-        >
-          <div
-            v-if="index % 2 === 0"
-            class="hidden md:flex justify-between items-center"
-          >
+        <div v-for="(edu, index) in educationHistory" :key="edu.id" class="mb-10 w-full px-4">
+          <!-- Desktop kiri -->
+          <div v-if="index % 2 === 0" class="hidden md:flex justify-between items-center">
             <div class="w-1/2 pr-8 flex justify-end">
               <a
                 :href="edu.link"
@@ -56,16 +48,22 @@
               </a>
             </div>
             <div class="w-1/2 flex justify-start">
-              <div class="w-4 h-4 bulet rounded-full z-10" data-aos="fade-in" data-aos-duration="800"></div>
+              <div
+                class="w-4 h-4 bulet rounded-full z-10"
+                data-aos="fade-in"
+                data-aos-duration="800"
+              ></div>
             </div>
           </div>
 
-          <div
-            v-else
-            class="hidden md:flex justify-between items-center"
-          >
+          <!-- Desktop kanan -->
+          <div v-else class="hidden md:flex justify-between items-center">
             <div class="w-1/2 flex justify-end">
-              <div class="w-4 h-4 bulet rounded-full z-10" data-aos="fade-in" data-aos-duration="800"></div>
+              <div
+                class="w-4 h-4 bulet rounded-full z-10"
+                data-aos="fade-in"
+                data-aos-duration="800"
+              ></div>
             </div>
             <div class="w-1/2 pl-8 flex justify-start">
               <a
@@ -85,7 +83,7 @@
             </div>
           </div>
 
-          <!-- Mobile layout -->
+          <!-- Mobile -->
           <div class="md:hidden flex flex-col items-center gap-4">
             <div class="w-4 h-4 bulet rounded-full z-10"></div>
             <a
@@ -128,7 +126,7 @@ onMounted(async () => {
 
 <style scoped>
 .edu {
-  background-image: linear-gradient(to bottom right, #000000, #ffffff);
+  background-image: linear-gradient(to bottom, #eeeeee, #d4d4d4);
   background-size: cover;
   background-position: center;
 }
@@ -146,7 +144,9 @@ onMounted(async () => {
   display: flex;
   align-items: center;
   gap: 1rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 .card:hover {
   transform: translateY(-6px);

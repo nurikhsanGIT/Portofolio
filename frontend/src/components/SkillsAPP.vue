@@ -1,5 +1,5 @@
 <template>
-  <section id="skill" class="py-20 min-h-screen font-sans">
+  <section id="skill" class="py-20 min-h-screen font-sans skill-bg">
     <div class="container mx-auto px-6">
       <SectionTitle title="KEAHLIAN" />
       <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -48,8 +48,8 @@ onMounted(async () => {
 </script>
 
 <style scoped>
-#skill {
-  background-image: linear-gradient(to bottom right, #000000, #ffffff);
+.skill-bg {
+  background-image: linear-gradient(to bottom, #d4d4d4, #bcbcbc);
   background-size: cover;
   background-position: center;
 }
