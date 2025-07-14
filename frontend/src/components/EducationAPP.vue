@@ -1,64 +1,105 @@
 <template>
   <section
     id="pendidikan"
-    class="py-20 bg-gradient-to-r from-blue-100 via-blue-50 to-green-100 min-h-screen font-sans"
+    class="edu py-20 bg-gradient-to-r from-blue-100 via-blue-50 to-green-100 min-h-screen font-sans overflow-x-hidden"
   >
-    <div class="container mx-auto px-6">
-      <SectionTitle title="PENDIDIKAN" />
+    <div class="container mx-auto px-4 sm:px-6">
+      <!-- Section Title -->
+      <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+        <SectionTitle title="Education History" class="text-white" />
+      </div>
 
+      <!-- Deskripsi -->
+      <div
+        class="max-w-3xl mx-auto text-white text-center mt-6 mb-12"
+        data-aos="fade-up"
+        data-aos-delay="600"
+        data-aos-duration="800"
+      >
+        <p class="text-white/90 leading-relaxed">
+        Perjalanan akademik saya menjadi pondasi penting dalam membentuk pemahaman yang mendalam
+        terhadap dunia teknologi informasi dan pengembangan aplikasi, yang kini saya tekuni sebagai seorang IT Developer.
+        </p>
+      </div>
       <div class="relative">
         <div
-          class="absolute hidden md:block top-0 bottom-0 left-1/2 border-l-2 border-gray-300"
+          class="hidden md:block absolute h-full border-r-2 border-gray-300 left-1/2 transform -translate-x-1/2"
+          data-aos="fade-in"
+          data-aos-duration="800"
+          data-aos-delay="600"
         ></div>
-
         <div
           v-for="(edu, index) in educationHistory"
           :key="edu.id"
-          class="mb-8 md:mb-12 w-full relative"
+          class="mb-10 w-full px-4"
         >
           <div
-            :class="[
-              'flex flex-col md:flex-row w-full items-center',
-              index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-            ]"
+            v-if="index % 2 === 0"
+            class="hidden md:flex justify-between items-center"
           >
-            <div class="w-full md:w-1/2 md:px-8 flex justify-center md:justify-end relative">
-              
-              <div
-                class="hidden md:block absolute top-1/2 w-4 h-4 bg-blue-600 rounded-full z-10"
-                :class="index % 2 === 0
-                  ? '-right-8 translate-y-[-50%]'
-                  : '-left-8 translate-y-[-50%]'"
-              ></div>
-
-              <div
-                class="bg-white rounded-xl shadow-lg p-4 md:p-6 hover:shadow-2xl transition duration-300 flex flex-col md:flex-row items-center gap-2 md:gap-4 w-full md:max-w-md"
+            <div class="w-1/2 pr-8 flex justify-end">
+              <a
+                :href="edu.link"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="card max-w-md"
+                data-aos="fade-right"
               >
-                <img
-                  :src="edu.image"
-                  class="w-16 h-16 object-contain"
-                  alt="Logo Institusi"
-                />
-                <div
-                  :class="index % 2 === 0
-                    ? 'text-center md:text-right'
-                    : 'text-center md:text-left'
-                  "
-                  class="w-full"
-                >
-                  <p class="text-xs md:text-sm font-semibold text-blue-600 mb-1">
-                    {{ edu.period }}
-                  </p>
-                  <h3 class="text-lg md:text-2xl font-bold text-gray-800 mb-1">
-                    {{ edu.institution }}
-                  </h3>
-                  <p class="text-gray-600 text-xs md:text-base">
-                    {{ edu.major }}
-                  </p>
+                <img :src="edu.logo" class="w-16 h-16 object-contain" />
+                <div class="text-right">
+                  <p class="text-sm font-semibold text-yellow-500 mb-1">{{ edu.period }}</p>
+                  <h3 class="text-2xl font-bold text-white mb-1">{{ edu.institution }}</h3>
+                  <p class="text-white/80">{{ edu.major }}</p>
                 </div>
-              </div>
+              </a>
             </div>
-            <div class="hidden md:block w-1/2"></div>
+            <div class="w-1/2 flex justify-start">
+              <div class="w-4 h-4 bulet rounded-full z-10" data-aos="fade-in" data-aos-duration="800"></div>
+            </div>
+          </div>
+
+          <div
+            v-else
+            class="hidden md:flex justify-between items-center"
+          >
+            <div class="w-1/2 flex justify-end">
+              <div class="w-4 h-4 bulet rounded-full z-10" data-aos="fade-in" data-aos-duration="800"></div>
+            </div>
+            <div class="w-1/2 pl-8 flex justify-start">
+              <a
+                :href="edu.link"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="card max-w-md"
+                data-aos="fade-left"
+              >
+                <img :src="edu.logo" class="w-16 h-16 object-contain" />
+                <div class="text-right">
+                  <p class="text-sm font-semibold text-yellow-500 mb-1">{{ edu.period }}</p>
+                  <h3 class="text-2xl font-bold text-white mb-1">{{ edu.institution }}</h3>
+                  <p class="text-white/80">{{ edu.major }}</p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Mobile: layout vertikal -->
+          <div class="md:hidden flex flex-col items-center gap-4">
+            <div class="w-4 h-4 bulet rounded-full z-10"></div>
+            <a
+              :href="edu.link"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="card w-full max-w-sm text-left"
+              data-aos="fade-up"
+            >
+              <img :src="edu.logo" class="w-16 h-16 object-contain" />
+              <div>
+                <p class="text-sm font-semibold text-yellow-500 mb-1">{{ edu.period }}</p>
+                <h3 class="text-2xl font-bold text-white mb-1">{{ edu.institution }}</h3>
+                <p class="text-white/80">{{ edu.major }}</p>
+              </div>
+            </a>
           </div>
         </div>
       </div>
@@ -82,3 +123,31 @@ onMounted(async () => {
   }
 })
 </script>
+
+<style scoped>
+.edu {
+  background-image: url('../assets/background/wl7.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.bulet {
+  background-color: #e9c200;
+}
+.card {
+  background-color: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+}
+</style>
