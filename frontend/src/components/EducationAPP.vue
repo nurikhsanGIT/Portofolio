@@ -1,8 +1,8 @@
 <template>
-  <section id="pendidikan" class="py-20 min-h-screen font-sans edu">
+  <section id="pendidikan" class="py-20 min-h-screen font-sans edu"> +
     <div class="container mx-auto px-6 md:px-16">
       <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
-        <SectionTitle title="PENDIDIKAN" class="text-white" />
+        <SectionTitle title="PENDIDIKAN" class="text-gray-800" />
       </div>
       <div class="relative">
         <div
@@ -79,7 +79,7 @@ onMounted(async () => {
 
 <style scoped>
 .edu {
-  background-image: linear-gradient(to right, #e0f2fe, #d1fae5);
+  background-image: linear-gradient(to right, #f5f5f5 , #e0e0e0);
   background-size: cover;
   background-position: center;
 }
